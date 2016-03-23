@@ -3,8 +3,7 @@
 
 #Script to calculate B-damage for protein atoms
 import sys
-sys.path.insert(0,'./Subroutines')
-from CalculateBdamage import cambda
+from Subroutines.CalculateBdamage import cambda
 
 #read the filename from the CL input
 fileCont = open(sys.argv[1],'r')
