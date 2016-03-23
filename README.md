@@ -1,18 +1,18 @@
-# B_Damage
-A program use to calculate B_Damage values for a biomolecular structure whose atomic coordinates are stored in PDB format.
+# B<sub>Damage</sub>
+A program use to calculate B<sub>Damage</sub> values for a biomolecular structure whose atomic coordinates are stored in PDB format.
 
 **NOTE: The program is currently written in MATLAB but a version written in Python is currently under development.**
 
 ## Introduction
-For molecular structures determined using X-ray crystallography each atom in the structure is assigned an ***atomic B factor*** value. This value effectively represents our level of uncertainty about the allocated position of that atom. The most mobile atoms will have the highest B factor values. However an atom's mobility could be due to different factors: increased thermal motion due to absorbed energy from the incident X-ray photons (a sign of *radiation damage*), or it could simply be due to the atom being in a highly flexible region of the protein and it is not surrounded by other 'stationary' atoms. ***B_Damage*** is a metric that attempts to deconvolute these factors to give an "effective" B factor value that is just a measure of the damage.   
+For molecular structures determined using X-ray crystallography each atom in the structure is assigned an ***atomic B factor*** value. This value effectively represents our level of uncertainty about the allocated position of that atom. The most mobile atoms will have the highest B factor values. However an atom's mobility could be due to different factors: increased thermal motion due to absorbed energy from the incident X-ray photons (a sign of *radiation damage*), or it could simply be due to the atom being in a highly flexible region of the protein and it is not surrounded by other 'stationary' atoms. ***B<sub>Damage</sub>*** is a metric that attempts to deconvolute these factors to give an "effective" B factor value that is just a measure of the damage.   
 
-**B_Damage** for a given atom is the ratio of the atom's B factor and the average B factor of atoms within a *similar packing density*. Atoms are grouped into **Similar packing density** environments, meaning that atoms in that group have a similar surrounding atomic environment which can be defined in several ways. The default here is that atoms with similar packing densities have a similar number of atoms within a given radius of the atom.
+**B<sub>Damage</sub>** for a given atom is the ratio of the atom's B factor and the average B factor of atoms within a *similar packing density*. Atoms are grouped into **Similar packing density** environments, meaning that atoms in that group have a similar surrounding atomic environment which can be defined in several ways. The default here is that atoms with similar packing densities have a similar number of atoms within a given radius of the atom.
 
 ## Usage
 **NOTE: This currently only refers to the version written in MATLAB. We'll update this when the Python version is complete.**   
-Currently there are no binaries to download for the B_damage program so you'll have to download the source code to run it if you have the correct interpreter downloaded. The current version of the program has been tested on MATLAB 2014b and MATLAB 2015b but should work on other recent versions of [MATLAB](http://uk.mathworks.com/products/matlab/?refresh=true). MATLAB is also mostly compatible with [GNU Octave](https://www.gnu.org/software/octave/) so although it hasn't been tested with Octave, you may find it works with it too.   
+Currently there are no binaries to download for the B<sub>damage</sub> program so you'll have to download the source code to run it if you have the correct interpreter downloaded. The current version of the program has been tested on MATLAB 2014b and MATLAB 2015b but should work on other recent versions of [MATLAB](http://uk.mathworks.com/products/matlab/?refresh=true). MATLAB is also mostly compatible with [GNU Octave](https://www.gnu.org/software/octave/) so although it hasn't been tested with Octave, you may find it works with it too.   
 
-- Assuming you have the correct interpreter downloaded you should download the source *B_Damage* code (scroll to the top of the page and on the right click on *"Download ZIP"*) and extract the contents to a directory of your choice.
+- Assuming you have the correct interpreter downloaded you should download the source *B<sub>Damage</sub>* code (scroll to the top of the page and on the right click on *"Download ZIP"*) and extract the contents to a directory of your choice.
 - Open a command window/terminal and change directory to the MATLAB code. It should be somewhere like `path/to/your/directory/B_Damage-master/CalculateBdamage`.
 - Once in the directory you can calculate B damage values for a structure with the command `matlab -r "CalculateBdamage('pdb code')"` where `pdb code` is the 4 letter code for the structure that you wish to calculate B damage for.
 
